@@ -1,4 +1,8 @@
 # SFMLTutoriales
 
-Probados con Visual Studio. Instalar el paquete SFML con VCPKG desde el cmd. No hay que hacer nada más. Sólo crear una solución y copiar el código.
+* Tested on Windows 10
+* To compile sources, use MS Visual Studio and install SFML package using Vcpkg with cmd prompt or Powershell.
+* Sources were modified for compilation without console window, so 'int main' was changed to 'int wWinMain' and using MS Visual Studio Create Solution => Desktop => Empty project.
+
+
 
