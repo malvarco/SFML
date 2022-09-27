@@ -1,4 +1,4 @@
-# SFMLTutoriales
+# SFMLTutorials
 
 * Tested on Windows 10
 * To compile sources, use MS Visual Studio and install SFML package using Vcpkg with cmd prompt or Powershell.
