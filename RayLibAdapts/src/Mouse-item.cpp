@@ -7,6 +7,21 @@
  // SFML libraries
 #include <SFML/Graphics.hpp>
 
+void draw_circle(int center_x, int center_y, int radius_) {
+    // Setting the color to be RED with 100% opaque (0% trasparent).
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+
+    // Drawing circle
+    for (int x = center_x - radius_; x <= center_x + radius_; x++) {
+        for (int y = center_y - radius_; y <= center_y + radius_; y++) {
+            if ((std::pow(center_y - y, 2) + std::pow(center_x - x, 2)) <=
+                std::pow(radius_, 2)) {
+                SDL_RenderDrawPoint(renderer, x, y);
+            }
+        }
+    }
+
+
  int wWinMain()
 
 {
@@ -36,6 +51,8 @@
            else if (sf::Mouse::isButtonPressed(sf::Mouse::Middle))shape.setFillColor(sf::Color::Green);
            else if (sf::Mouse::isButtonPressed(sf::Mouse::Right))shape.setFillColor(sf::Color::Blue);
            
+           draw_circle(200, 100, 50);
+
         // Event loop
         sf::Event event;
         while (window.pollEvent(event))
